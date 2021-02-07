@@ -20,7 +20,7 @@ def index():
         int_value= [float(x) for x in request.form.values()]
         final_value= [np.array(int_value)]
         result= model.predict(final_value)
-        prediction=result[0]
+        prediction=result[0].round(0)
         return render_template("results.html", prediction=prediction)
 if __name__ == "__main__":
     app.run(debug=True)
