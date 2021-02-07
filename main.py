@@ -7,7 +7,7 @@ import numpy as np
 import sklearn
 
 app = Flask(__name__) # initializing a flask app
-model=pickle.load(open("affair_prediction.pkl","rb"))
+model=pickle.load(open("bikeshareCount.pkl.pkl","rb"))
 
 @app.route('/',methods=['GET'])  # route to display the home page
 @cross_origin()
